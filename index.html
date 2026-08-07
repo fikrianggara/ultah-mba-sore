@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="parallax-wrapper">
+      <!-- Floating shapes -->
+      <div class="shape shape-1">🎈</div>
+      <div class="shape shape-2">✨</div>
+      <div class="shape shape-3">💖</div>
+      <div class="shape shape-4">🎀</div>
+
+      <section class="section hero">
+        <h1 class="reveal-text">Selamat hari hepibesdeii</h1>
+        <p class="subtitle reveal-text delay-1">
+          Untuk cewek yang paling spesial 😊
+        </p>
+        <div class="scroll-indicator">
+          <span>Scroll dungg, ngehehhe</span>
+          <div class="arrow">↓</div>
+        </div>
+      </section>
+
+      <section class="section content">
+        <div class="card reveal-card">
+          <div class="card-img-wrapper">
+            <img
+              src="assets/images/c8efffb5-dc1c-44cc-b269-d6ec395ca39f.JPG"
+              alt="Birthday Girl"
+            />
+          </div>
+          <div class="card-text">
+            <h2>Cewek hebat</h2>
+            <p>
+              Semoga harimu dipenuhi dengan cinta, canda, dan cerita indah,
+              sayang
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section content reverse">
+        <div class="card reveal-card">
+          <div class="card-text">
+            <h2>Sweetest hope</h2>
+            <p>Semoga hari-harimu seindah Banda Neira dan selucu jejee! 🧸</p>
+          </div>
+          <div class="card-img-wrapper">
+            <img
+              src="assets/images/cdfea829-0b65-4401-8bd9-d956a1898cdf.JPG"
+              alt="Birthday Cake"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section content">
+        <div class="card reveal-card">
+          <div class="card-img-wrapper">
+            <img
+              src="assets/images/8A73D1A0-0463-4ACB-AF49-B525CCF7A27D.JPG"
+              alt="Birthday Bear"
+            />
+          </div>
+          <div class="card-text">
+            <h2>Peluk Jauh :"!</h2>
+            <p>Maaf belum bisa ngerayain ultahnya di dekat kamu ya sayang :"</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section carousel-section">
+        <h2 class="reveal-text section-title">Mba sore cantik</h2>
+        <ul class="scroller" id="photo-carousel">
+          <!-- Javascript will populate carousel items here -->
+        </ul>
+      </section>
+
+      <section class="section grid-section">
+        <h2 class="reveal-text section-title">Maaci buat momennya ya ☺️</h2>
+        <div class="photo-grid" id="photo-grid">
+          <!-- Javascript will populate grid items here -->
+        </div>
+      </section>
+
+      <section class="section scattered-section" id="scattered-section">
+        <h2 class="reveal-text section-title">
+          Many Good Wishes for this cute gorll
+        </h2>
+        <div class="scattered-container" id="scattered-container">
+          <!-- Javascript will populate scattered polaroids here -->
+        </div>
+      </section>
+
+      <section class="section footer">
+        <h2 class="reveal-text">
+          Semoga tahun ini menjadi tahun yang penuh kebahagiaan, kesuksesan, dan
+          cinta untukmu, mba sore
+        </h2>
+        <button id="celebrateBtn">Klik Dongg</button>
+      </section>
+    </div>
+
+    <!-- Letter Modal -->
+    <div id="letter-modal" class="modal">
+      <div class="modal-content envelope">
+        <button class="close-btn" id="closeModalBtn">&times;</button>
+        <div class="letter">
+          <h3>Teruntuk mba sore cayangkuwh,</h3>
+          <p>Selamat hari hepibesdei ya sayangg</p>
+          <p>
+            Maaci dah lahir ke dunia ini dan jadi one of the best thing in my
+            life.. Di hari spesial ini, aku berdoa semoga kamu selalu diberi
+            kesehatan, kebahagiaan, dan kelancaran dalam segala urusan sayang.
+          </p>
+          <p>
+            Semoga di umurmu yang baru ini, kamu makinn shining shimmering
+            splendid, makin sayang dengan ibu, uda dan aku, semua mimpi kamu
+            bisa terwujud.
+          </p>
+          <p>
+            Aku bersyukur bat bisa ngerayain ultah kamu bareng kamu, walaupun
+            kita sedang berjarak. Tetep jadi mba sore cantik yang pinter, rajin,
+            penyayang keluarga dan aku, sabar dan andalan tungkal zityy.
+            <i>I love you Dinda mba sore </i> ❤️
+          </p>
+          <p class="signature">
+            With full of love,<br />Mas Jo kamu yang ganteng (kayanya :v)
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti"></canvas>
+
+    <script src="script.js"></script>
+  </body>
+</html>
