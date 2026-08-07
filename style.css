@@ -505,3 +505,80 @@ button:active {
     color: var(--pink-dark);
     text-align: right;
 }
+
+/* --- Responsive Adjustments for Mobile --- */
+@media (max-width: 768px) {
+    .section {
+        padding: 1.5rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+        gap: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .card-text h2 {
+        font-size: 2rem;
+    }
+
+    .card-text p {
+        font-size: 1rem;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 1rem;
+    }
+
+    .polaroid {
+        width: 140px;
+        height: 175px;
+        padding: 0.5rem 0.5rem 2.5rem 0.5rem;
+    }
+    
+    .scattered-container {
+        height: 60vh;
+    }
+
+    .modal-content.envelope {
+        padding: 2rem 1.5rem;
+        width: 95%;
+    }
+
+    .letter h3 {
+        font-size: 1.5rem;
+    }
+
+    .letter p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .letter .signature {
+        font-size: 1.2rem;
+    }
+    
+    button {
+        padding: 0.8rem 2rem;
+        font-size: 1.2rem;
+    }
+
+    .shape {
+        font-size: 2rem;
+    }
+    .shape-3 { font-size: 1.5rem; }
+    .shape-4 { font-size: 1.8rem; }
+}
