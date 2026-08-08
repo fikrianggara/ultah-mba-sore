@@ -202,6 +202,20 @@ function animateConfetti() {
     }
 }
 
+// Confetti celebration on page load
+confettiActive = true;
+spawnConfetti();
+animateConfetti();
+setTimeout(() => { confettiActive = false; }, 2500);
+
+// Scroll progress bar
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - doc.clientHeight;
+    progressBar.style.width = `${(doc.scrollTop / max) * 100}%`;
+}, { passive: true });
+
 document.getElementById('celebrateBtn').addEventListener('click', () => {
     // Open Modal
     document.getElementById('letter-modal').classList.add('active');

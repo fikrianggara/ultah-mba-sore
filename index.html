@@ -7,23 +7,60 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="progress-bar"></div>
     <div class="parallax-wrapper">
       <!-- Floating shapes -->
       <div class="shape shape-1">🎈</div>
       <div class="shape shape-2">✨</div>
       <div class="shape shape-3">💖</div>
       <div class="shape shape-4">🎀</div>
+      <div class="shape shape-5">🎁</div>
+      <div class="shape shape-6">🥰</div>
+      <div class="shape shape-7">🦋</div>
+      <div class="shape shape-8">🎉</div>
 
       <section class="section hero">
-        <h1 class="reveal-text">Selamat hari hepibesdeii</h1>
-        <p class="subtitle reveal-text delay-1">
-          Untuk cewek yang paling spesial 😊
-        </p>
+        <svg class="hero-balloons" viewBox="0 0 260 220" aria-hidden="true">
+          <g transform="translate(15,110)">
+            <g class="balloon-g g1">
+              <path class="balloon-body" d="M40 30c14 0 25 11 25 25 0 17-17 30-25 39-8-9-25-22-25-39 0-14 11-25 25-25z" fill="#FF69B4"/>
+              <path class="balloon-tie" d="M36 92l4 7 4-7z" fill="#FF1493"/>
+              <path class="balloon-string" d="M40 99c-4 12 6 18 2 30M40 99c5 10-4 20 0 30" stroke="#aaa" stroke-width="1.2" fill="none"/>
+            </g>
+          </g>
+          <g class="balloon-pos p2" transform="translate(150,120)">
+            <g class="balloon-g g2">
+              <path class="balloon-body" d="M40 130c14 0 25 11 25 25 0 17-17 30-25 39-8-9-25-22-25-39 0-14 11-25 25-25z" fill="#87CEEB"/>
+              <path class="balloon-tie" d="M36 192l4 7 4-7z" fill="#5A9BD5"/>
+              <path class="balloon-string" d="M40 199c-4 12 6 18 2 30M40 199c5 10-4 20 0 30" stroke="#aaa" stroke-width="1.2" fill="none"/>
+            </g>
+          </g>
+          <g class="balloon-pos p3" transform="translate(95,95)">
+            <g class="balloon-g g3">
+              <path class="balloon-body" d="M40 75c11 0 20 9 20 20 0 13-13 24-20 31-7-7-20-18-20-31 0-11 9-20 20-20Z" fill="#FFD700"/>
+              <path class="balloon-tie" d="M36 124l4 6 4-6z" fill="#DAA520"/>
+              <path class="balloon-string" d="M40 130c-3 9 5 14 1 23M40 130c4 8-3 16 0 23" stroke="#aaa" stroke-width="1" fill="none"/>
+            </g>
+          </g>
+        </svg>
+        <h1>Selamat hari hepibesdeii</h1>
+        <p class="subtitle">Untuk cewek yang paling spesial 😊</p>
         <div class="scroll-indicator">
           <span>Scroll dungg, ngehehhe</span>
           <div class="arrow">↓</div>
         </div>
       </section>
+
+      <div class="emoji-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span>🎈</span><span>🩷</span><span>🎂</span><span>✨</span><span>🥳</span><span>🎁</span><span>💖</span><span>🌸</span><span>🧁</span><span>🥰</span>
+          </div>
+          <div class="marquee-group">
+            <span>🎈</span><span>🩷</span><span>🎂</span><span>✨</span><span>🥳</span><span>🎁</span><span>💖</span><span>🌸</span><span>🧁</span><span>🥰</span>
+          </div>
+        </div>
+      </div>
 
       <section class="section content">
         <div class="card reveal-card">
@@ -44,6 +81,23 @@
       </section>
 
       <section class="section content reverse">
+        <svg class="cake-float" viewBox="0 0 140 150" aria-hidden="true">
+          <g class="cake-wob">
+            <ellipse cx="70" cy="128" rx="60" ry="10" fill="#FFE4E1" stroke="#FFB6C1"/>
+            <rect x="35" y="100" width="70" height="30" rx="4" fill="#FFB6C1"/>
+            <path d="M30 100 q10 8 20 0 q10 8 20 0 q10 8 20 0 q10 8 20 0 v10 h-80z" fill="#fff"/>
+            <rect x="40" y="70" width="60" height="32" rx="4" fill="#fff"/>
+            <circle cx="55" cy="86" r="4" fill="#FF69B4"/>
+            <circle cx="70" cy="84" r="4" fill="#FF1493"/>
+            <circle cx="85" cy="86" r="4" fill="#FFD700"/>
+            <rect x="48" y="52" width="6" height="20" rx="3" fill="#FF1493"/>
+            <rect x="67" y="48" width="6" height="24" rx="3" fill="#FF69B4"/>
+            <rect x="86" y="52" width="6" height="20" rx="3" fill="#FFD700"/>
+            <ellipse class="flame" cx="51" cy="46" rx="4" ry="9" fill="#FFD700"/>
+            <ellipse class="flame" cx="70" cy="41" rx="4" ry="9" fill="#FFA500"/>
+            <ellipse class="flame" cx="89" cy="46" rx="4" ry="9" fill="#FFD700"/>
+          </g>
+        </svg>
         <div class="card reveal-card">
           <div class="card-text">
             <h2>Sweetest hope</h2>
@@ -67,7 +121,7 @@
             />
           </div>
           <div class="card-text">
-            <h2>Peluk Jauh :"!</h2>
+            <h2>Peluk Jauh :"</h2>
             <p>Maaf belum bisa ngerayain ultahnya di dekat kamu ya sayang :"</p>
           </div>
         </div>
@@ -102,6 +156,17 @@
           cinta untukmu, mba sore
         </h2>
         <button id="celebrateBtn">Klik Dongg</button>
+
+        <div class="emoji-marquee marquee-reverse" aria-hidden="true">
+          <div class="marquee-track">
+            <div class="marquee-group">
+              <span>🥳</span><span>🎉</span><span>🪅</span><span>💝</span><span>🎊</span><span>🍰</span><span>💌</span>
+            </div>
+            <div class="marquee-group">
+              <span>🥳</span><span>🎉</span><span>🪅</span><span>💝</span><span>🎊</span><span>🍰</span><span>💌</span>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
 
