@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <audio
+      id="bgm"
+      src="assets/audio/perfect.mp3"
+      loop
+      preload="auto"
+      autoplay
+      muted
+    ></audio>
+    <button id="musicBtn" aria-label="Putar musik">🎵</button>
     <div id="progress-bar"></div>
     <div class="parallax-wrapper">
       <!-- Floating shapes -->
@@ -21,25 +30,55 @@
 
       <section class="section hero">
         <svg class="hero-balloons" viewBox="0 0 260 220" aria-hidden="true">
-          <g transform="translate(15,110)">
+          <g class="balloon-pos p1" transform="translate(15,95)">
             <g class="balloon-g g1">
-              <path class="balloon-body" d="M40 30c14 0 25 11 25 25 0 17-17 30-25 39-8-9-25-22-25-39 0-14 11-25 25-25z" fill="#FF69B4"/>
-              <path class="balloon-tie" d="M36 92l4 7 4-7z" fill="#FF1493"/>
-              <path class="balloon-string" d="M40 99c-4 12 6 18 2 30M40 99c5 10-4 20 0 30" stroke="#aaa" stroke-width="1.2" fill="none"/>
+              <path
+                class="balloon-body"
+                d="M40 30c14 0 25 11 25 25 0 17-17 30-25 39-8-9-25-22-25-39 0-14 11-25 25-25z"
+                fill="#FF69B4"
+              />
+              <path class="balloon-tie" d="M36 92l4 7 4-7z" fill="#FF1493" />
+              <path
+                class="balloon-string"
+                d="M40 99c-4 12 6 18 2 30M40 99c5 10-4 20 0 30"
+                stroke="#aaa"
+                stroke-width="1.2"
+                fill="none"
+              />
             </g>
           </g>
-          <g class="balloon-pos p2" transform="translate(150,120)">
+          <g class="balloon-pos p2" transform="translate(150,88)">
             <g class="balloon-g g2">
-              <path class="balloon-body" d="M40 130c14 0 25 11 25 25 0 17-17 30-25 39-8-9-25-22-25-39 0-14 11-25 25-25z" fill="#87CEEB"/>
-              <path class="balloon-tie" d="M36 192l4 7 4-7z" fill="#5A9BD5"/>
-              <path class="balloon-string" d="M40 199c-4 12 6 18 2 30M40 199c5 10-4 20 0 30" stroke="#aaa" stroke-width="1.2" fill="none"/>
+              <path
+                class="balloon-body"
+                d="M160 60c14 0 25 11 25 25 0 17-17 30-25 39-8-9-25-22-25-39 0-14 11-25 25-25z"
+                fill="#87CEEB"
+              />
+              <path class="balloon-tie" d="M156 122l4 7 4-7z" fill="#5A9BD5" />
+              <path
+                class="balloon-string"
+                d="M160 129c-4 12 6 18 2 30M160 129c5 10-4 20 0 30"
+                stroke="#aaa"
+                stroke-width="1.2"
+                fill="none"
+              />
             </g>
           </g>
-          <g class="balloon-pos p3" transform="translate(95,95)">
+          <g class="balloon-pos p3" transform="translate(95,105)">
             <g class="balloon-g g3">
-              <path class="balloon-body" d="M40 75c11 0 20 9 20 20 0 13-13 24-20 31-7-7-20-18-20-31 0-11 9-20 20-20Z" fill="#FFD700"/>
-              <path class="balloon-tie" d="M36 124l4 6 4-6z" fill="#DAA520"/>
-              <path class="balloon-string" d="M40 130c-3 9 5 14 1 23M40 130c4 8-3 16 0 23" stroke="#aaa" stroke-width="1" fill="none"/>
+              <path
+                class="balloon-body"
+                d="M100 5c11 0 20 9 20 20 0 13-13 24-20 31-7-7-20-18-20-31 0-11 9-20 20-20z"
+                fill="#FFD700"
+              />
+              <path class="balloon-tie" d="M96 54l4 6 4-6z" fill="#DAA520" />
+              <path
+                class="balloon-string"
+                d="M100 60c-3 9 5 14 1 23M100 60c4 8-3 16 0 23"
+                stroke="#aaa"
+                stroke-width="1"
+                fill="none"
+              />
             </g>
           </g>
         </svg>
@@ -54,10 +93,14 @@
       <div class="emoji-marquee" aria-hidden="true">
         <div class="marquee-track">
           <div class="marquee-group">
-            <span>🎈</span><span>🩷</span><span>🎂</span><span>✨</span><span>🥳</span><span>🎁</span><span>💖</span><span>🌸</span><span>🧁</span><span>🥰</span>
+            <span>🎈</span><span>🩷</span><span>🎂</span><span>✨</span
+            ><span>🥳</span><span>🎁</span><span>💖</span><span>🌸</span
+            ><span>🧁</span><span>🥰</span>
           </div>
           <div class="marquee-group">
-            <span>🎈</span><span>🩷</span><span>🎂</span><span>✨</span><span>🥳</span><span>🎁</span><span>💖</span><span>🌸</span><span>🧁</span><span>🥰</span>
+            <span>🎈</span><span>🩷</span><span>🎂</span><span>✨</span
+            ><span>🥳</span><span>🎁</span><span>💖</span><span>🌸</span
+            ><span>🧁</span><span>🥰</span>
           </div>
         </div>
       </div>
@@ -83,19 +126,50 @@
       <section class="section content reverse">
         <svg class="cake-float" viewBox="0 0 140 150" aria-hidden="true">
           <g class="cake-wob">
-            <ellipse cx="70" cy="128" rx="60" ry="10" fill="#FFE4E1" stroke="#FFB6C1"/>
-            <rect x="35" y="100" width="70" height="30" rx="4" fill="#FFB6C1"/>
-            <path d="M30 100 q10 8 20 0 q10 8 20 0 q10 8 20 0 q10 8 20 0 v10 h-80z" fill="#fff"/>
-            <rect x="40" y="70" width="60" height="32" rx="4" fill="#fff"/>
-            <circle cx="55" cy="86" r="4" fill="#FF69B4"/>
-            <circle cx="70" cy="84" r="4" fill="#FF1493"/>
-            <circle cx="85" cy="86" r="4" fill="#FFD700"/>
-            <rect x="48" y="52" width="6" height="20" rx="3" fill="#FF1493"/>
-            <rect x="67" y="48" width="6" height="24" rx="3" fill="#FF69B4"/>
-            <rect x="86" y="52" width="6" height="20" rx="3" fill="#FFD700"/>
-            <ellipse class="flame" cx="51" cy="46" rx="4" ry="9" fill="#FFD700"/>
-            <ellipse class="flame" cx="70" cy="41" rx="4" ry="9" fill="#FFA500"/>
-            <ellipse class="flame" cx="89" cy="46" rx="4" ry="9" fill="#FFD700"/>
+            <ellipse
+              cx="70"
+              cy="128"
+              rx="60"
+              ry="10"
+              fill="#FFE4E1"
+              stroke="#FFB6C1"
+            />
+            <rect x="35" y="100" width="70" height="30" rx="4" fill="#FFB6C1" />
+            <path
+              d="M30 100 q10 8 20 0 q10 8 20 0 q10 8 20 0 q10 8 20 0 v10 h-80z"
+              fill="#fff"
+            />
+            <rect x="40" y="70" width="60" height="32" rx="4" fill="#fff" />
+            <circle cx="55" cy="86" r="4" fill="#FF69B4" />
+            <circle cx="70" cy="84" r="4" fill="#FF1493" />
+            <circle cx="85" cy="86" r="4" fill="#FFD700" />
+            <rect x="48" y="52" width="6" height="20" rx="3" fill="#FF1493" />
+            <rect x="67" y="48" width="6" height="24" rx="3" fill="#FF69B4" />
+            <rect x="86" y="52" width="6" height="20" rx="3" fill="#FFD700" />
+            <ellipse
+              class="flame"
+              cx="51"
+              cy="46"
+              rx="4"
+              ry="9"
+              fill="#FFD700"
+            />
+            <ellipse
+              class="flame"
+              cx="70"
+              cy="41"
+              rx="4"
+              ry="9"
+              fill="#FFA500"
+            />
+            <ellipse
+              class="flame"
+              cx="89"
+              cy="46"
+              rx="4"
+              ry="9"
+              fill="#FFD700"
+            />
           </g>
         </svg>
         <div class="card reveal-card">
@@ -160,10 +234,12 @@
         <div class="emoji-marquee marquee-reverse" aria-hidden="true">
           <div class="marquee-track">
             <div class="marquee-group">
-              <span>🥳</span><span>🎉</span><span>🪅</span><span>💝</span><span>🎊</span><span>🍰</span><span>💌</span>
+              <span>🥳</span><span>🎉</span><span>🪅</span><span>💝</span
+              ><span>🎊</span><span>🍰</span><span>💌</span>
             </div>
             <div class="marquee-group">
-              <span>🥳</span><span>🎉</span><span>🪅</span><span>💝</span><span>🎊</span><span>🍰</span><span>💌</span>
+              <span>🥳</span><span>🎉</span><span>🪅</span><span>💝</span
+              ><span>🎊</span><span>🍰</span><span>💌</span>
             </div>
           </div>
         </div>

@@ -243,3 +243,58 @@ window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 });
+
+// --- Music ---
+const bgm = document.getElementById('bgm');
+const musicBtn = document.getElementById('musicBtn');
+let musicStarted = false;
+
+function startMusic() {
+    bgm.muted = false;
+    bgm.play().then(() => {
+        musicStarted = true;
+        musicBtn.classList.add('playing');
+        musicBtn.classList.remove('muted');
+        musicBtn.textContent = '🎵';
+        musicBtn.title = 'Jeda musik';
+    }).catch(() => {
+        musicBtn.classList.add('muted');
+    });
+}
+
+function tryMutedAutoplay() {
+    bgm.muted = true;
+    bgm.play().then(() => {
+        musicStarted = true;
+        musicBtn.classList.add('playing');
+        musicBtn.classList.remove('muted');
+        musicBtn.textContent = '🎵';
+        musicBtn.title = 'Jeda musik';
+    }).catch(() => {
+        musicBtn.classList.add('muted');
+    });
+}
+
+musicBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (musicStarted && !bgm.paused) {
+        bgm.pause();
+        musicStarted = false;
+        musicBtn.classList.remove('playing');
+        musicBtn.textContent = '🎵';
+        musicBtn.title = 'Putar musik';
+    } else {
+        startMusic();
+    }
+});
+
+// Autoplay on load: try muted first (allowed by most policies),
+// then unmute + resume on the first real user gesture.
+tryMutedAutoplay();
+
+const startOnScroll = () => {
+    if (musicStarted && !bgm.paused && !bgm.muted) return;
+    startMusic();
+    window.removeEventListener('scroll', startOnScroll);
+};
+window.addEventListener('scroll', startOnScroll);

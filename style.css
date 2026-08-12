@@ -670,6 +670,37 @@ button:active {
     transition: width 0.1s linear;
 }
 
+/* Music toggle button */
+#musicBtn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1002;
+    box-shadow: 0 8px 20px rgba(255, 20, 147, 0.35);
+}
+
+#musicBtn.playing {
+    animation: spinSlow 3s linear infinite;
+}
+
+#musicBtn.muted {
+    opacity: 0.7;
+    filter: grayscale(0.6);
+}
+
+@keyframes spinSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 /* Hero entrance animations on page load */
 @keyframes popIn {
     0% { opacity: 0; transform: scale(0.3) rotate(-12deg); }
